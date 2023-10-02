@@ -235,8 +235,8 @@ async def autopilot():
         try:
             r = await kazu_bot(
                 CreateChannelRequest(
-                    title="Logs Kazu Ubot",
-                    about="Logs Kazu Ubot \n\n Cʀᴇᴀᴛᴇᴅ Bʏ @FH_KP",
+                    title="𝙡𝙤𝙜𝙨 𝙗𝙡𝙖𝙘𝙠 𝙩𝙝𝙤𝙣 𝙗𝙤𝙩",
+                    about="𝙡𝙤𝙜𝙨 𝙗𝙡𝙖𝙘𝙠 𝙩𝙝𝙤𝙣 𝙗𝙤𝙩 \n\n 𝘤𝘳𝘦𝘢𝘵𝘦𝘥 𝘣𝘺 @FH_KP",
                     megagroup=True,
                 ),
             )
