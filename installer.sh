@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/ionmusic/Kazu-Ubot.git"
-DIR="/root/ionmusic"
+REPO="https://github.com/zzsssase/zzunot.git"
+DIR="/root/zzunot"
 
 spinner(){
     local pid=$!
