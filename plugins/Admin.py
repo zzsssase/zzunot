@@ -6,15 +6,15 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 """
-◈ Perintah Tersedia
+◈ اوامر الادمن
 
-• `{i} promote` <balas ke pengguna/userid/username>
+• `{i} promote` <لرفع شخص مشرف بالجروب>
 
-• `{i} demote` <balas ke pengguna/userid/username>
+• `{i} demote` <لتنزيل شخص من الاشراف + يجيب انت تكون من رفعه مش ف>
 
-• `{i} ban` <balas ke pengguna/userid/username>
+• `{i} ban` <لحظر شخص >
 
-• `{i} unban` <balas ke pengguna/userid/username>
+• `{i} unban` <لألغاء الحظر>
 
 • `{i} kick` <balas ke pengguna/userid/username>
 
