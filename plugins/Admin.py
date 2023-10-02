@@ -6,25 +6,25 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 """
-◈ اوامر الادمن
+◈ Perintah Tersedia
 
-• `{i} promote` <لرفع شخص مشرف بالجروب>
+• `{i} رفع مشرف` <**لرفع شخص مشرف قم بالرد على رسالته او يوزه**>
 
-• `{i} demote` <لتنزيل شخص من الاشراف + يجيب انت تكون من رفعه مش ف>
+• `{i} تنزيل مشرف ` <لتنزيل شخص من الاشراف بالرد على رسالته او يوزه + يجب يكون انت من قام برفعه>
 
-• `{i} ban` <لحظر شخص >
+• `{i} حظر` <لحظر شخص قم بالرد على رسالته او يوزه>
 
-• `{i} unban` <لألغاء الحظر>
+• `{i} الغاء حظر ` <لرفع الحظر الشخص قم بالرد على رسالته او يوزه >
 
-• `{i} kick` <balas ke pengguna/userid/username>
+• `{i} كتم` <لرفع الكتم عن الشخص قم بالرد على رسالته او يوزه>
 
-• `{i} pin` <balas ke pesan>
+• `{i} تثبيت ` <قم بالرد على الرساله لتثبيتها>
 
-• `{i} purgeall` <balas ke pesan>
+• `{i} حذف` <قم بالرد على رسالة الشخص لحذفها>
 
-• `{i} purge` <balas ke pesan>
+• `{i} مسح` <قم بالرد على الرسالة ليتم حذفها>
 
-• `{i} purgeme` <balas ke pesan/angka>
+• `{i} تنظيف` <قم بكتابة الامر + عدد الرسايل>
 """
 
 import asyncio
@@ -53,7 +53,7 @@ from . import (
 
 
 @kazu_cmd(
-    pattern="promote( (.*)|$)",
+    pattern="رفع مشرف( (.*)|$)",
     admins_only=True,
     manager=True,
     require="add_admins",
@@ -96,7 +96,7 @@ async def prmte(ayra):
 
 
 @kazu_cmd(
-    pattern="demote( (.*)|$)",
+    pattern="تنزيل مشرف( (.*)|$)",
     admins_only=True,
     manager=True,
     require="add_admins",
@@ -186,7 +186,7 @@ async def uunban(ayra):
 
 
 @kazu_cmd(
-    pattern="kick( (.*)|$)",
+    pattern="كتم( (.*)|$)",
     manager=True,
     require="ban_users",
     fullsudo=True,
@@ -368,7 +368,7 @@ async def fastpurger(purg):
 
 
 @kazu_cmd(
-    pattern="purgeme( (.*)|$)",
+    pattern="مسح( (.*)|$)",
 )
 async def fastpurgerme(purg):
     if num := purg.pattern_match.group(1).strip():
@@ -410,7 +410,7 @@ async def fastpurgerme(purg):
 
 
 @kazu_cmd(
-    pattern="purgeall$",
+    pattern="حذف$",
 )
 async def _(e):
     if not e.is_reply:
@@ -446,7 +446,7 @@ async def djshsh(event):
 
 
 @kazu_cmd(
-    pattern="listpinned$",
+    pattern="المثبت$",
 )
 async def get_all_pinned(event):
     x = await event.eor(get_string("com_1"))
@@ -477,7 +477,7 @@ async def get_all_pinned(event):
 
 
 @kazu_cmd(
-    pattern="autodelete( (.*)|$)",
+    pattern="تنظيف( (.*)|$)",
     admins_only=True,
 )
 async def autodelte(ayra):

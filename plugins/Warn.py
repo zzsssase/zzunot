@@ -5,16 +5,13 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-◈ Perintah Tersedia
+◈ اوامر الإنذارات
 
-•`{i}warn <reply to user> <reason>`
-    Memberi Peringatan.
+•`{i}انذار < لإعطاء الشخص انذار قم بالرد على رسالته او يوزه.
 
-•`{i}resetwarn <reply to user>`
-    Untuk mengatur ulang Semua Peringatan.
+•`{i}الغاء الانذار< لألغاء انذار الشخص قم بالرد على رسالته او يوزه.
 
-•`{i}warns <reply to user>`
-   Untuk Mendapatkan Daftar Peringatan dari pengguna.
+•`{i}الانذارات <لمعرفة عدد الانذارات لشخص.
 
 •`{i}setwarn <warn count> | <ban/mute/kick>`
    Tetapkan Angka dalam jumlah peringatan untuk peringatan
@@ -30,7 +27,7 @@ from . import eor, get_string, inline_mention, udB, kazu_cmd
 
 
 @kazu_cmd(
-    pattern="warn( (.*)|$)",
+    pattern="انذار( (.*)|$)",
     manager=True,
     groups_only=True,
     admins_only=True,
@@ -104,7 +101,7 @@ async def warn(e):
 
 
 @kazu_cmd(
-    pattern="resetwarn( (.*)|$)",
+    pattern="الغاء الانذار( (.*)|$)",
     manager=True,
     groups_only=True,
     admins_only=True,
@@ -130,7 +127,7 @@ async def rwarn(e):
 
 
 @kazu_cmd(
-    pattern="warns( (.*)|$)",
+    pattern="الانذارات( (.*)|$)",
     manager=True,
     groups_only=True,
     admins_only=True,

@@ -7,24 +7,22 @@
 """
 ◈ Perintah Tersedia
 
-• `{i} startvc`
-    Mulai Panggilan Grup dalam grup.
+• `{i} فتح المكالمه `
+    لفتح المحادثة الصوتية في المجموعه.
 
-• `{i} stopvc`
-    Hentikan Panggilan Grup dalam grup.
+• `{i} انهاء المكالمه `
+    لأنهاء المحادثة الصوتية في المجموعة.
 
-• `{i} vctitle <title>`
-    Ubah judul Panggilan grup.
+• `{i} اسم المكالمه <title>`
+    لتغير اسم المحادثة الصوتية.
 
-• `{i} vcinvite`
-    Undang semua anggota grup di Group Call.
+• `{i} دعوه`
+    لدعوة جميع الأعضاء لمحادثة الصوتية.
     (Anda harus bergabung)
     
-• `{i} joinvc` <chat id/username grup>
-   Bergabunglah dengan obrolan suara.
+• `{i} انضم` <للانضمام لمحادثة الصوتية.
 
-• `{i} leavevc` <chat id/username grup>
-   Tinggalkan obrolan suara.
+• `{i} خروج` <لخروج من المحادثة الصوتية.
 
 """
 
@@ -52,7 +50,7 @@ def user_list(l, n):
 
 
 @kazu_cmd(
-    pattern="stopvc$",
+    pattern="انهاء المكالمه$",
     admins_only=True,
     groups_only=True,
 )
@@ -65,7 +63,7 @@ async def _(e):
 
 
 @kazu_cmd(
-    pattern="vcinvite$",
+    pattern="دعوه$",
     groups_only=True,
 )
 async def _(e):
@@ -86,7 +84,7 @@ async def _(e):
 
 
 @kazu_cmd(
-    pattern="startvc$",
+    pattern="فتح المكالمه$",
     admins_only=True,
     groups_only=True,
 )
@@ -99,7 +97,7 @@ async def _(e):
 
 
 @kazu_cmd(
-    pattern="vctitle(?: |$)(.*)",
+    pattern="اسم المكالمه(?: |$)(.*)",
     admins_only=True,
     groups_only=True,
 )
@@ -114,7 +112,7 @@ async def _(e):
         await e.eor(f"`{ex}`")
         
         
-@vc_asst("joinvc")
+@vc_asst("انضم")
 async def join_(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -133,7 +131,7 @@ async def join_(event):
         await aySongs.vc_joiner()
 
 
-@vc_asst("(end|leavevc)")
+@vc_asst("(انزل|خروج)")
 async def leaver(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]

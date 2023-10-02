@@ -51,7 +51,7 @@ if HOSTED_ON == "heroku":
         LOGS.exception(er)
 
 
-@kazu_cmd(pattern="usage")
+@kazu_cmd(pattern="استخدامي")
 async def usage_finder(event):
     x = await event.eor(get_string("com_1"))
     try:
