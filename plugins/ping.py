@@ -67,9 +67,9 @@ async def _(ping):
     sleep(3)
     await ping.edit(
         f"**✧ 𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n\n"
-        f"✧ **𝙿𝙸𝙽𝙶𝙴𝚁 :** `%sms`\n"
+        f"✧ **البنج :** `%sms`\n"
         f"✧ **𝚄𝙿𝚃𝙸𝙼𝙴 :** `{uptime}` \n"
-        f"✧ **𝙾𝚆𝙽𝙴𝚁 :** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"✧ **المالك :** [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 
