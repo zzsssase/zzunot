@@ -53,7 +53,7 @@ fn = functions
 
 
 @kazu_cmd(
-    pattern="sysinfo$",
+    pattern="المعلومات$",
 )
 async def _(e):
     xx = await e.eor(get_string("com_1"))
