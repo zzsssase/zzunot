@@ -8,7 +8,7 @@
 """
 ◈ Perintah Tersedia
 
-• `{i} calc` - Inline Calculator
+• `{i} الحاسبه` - لعرض الحاسبة
 """
 
 import re
@@ -44,7 +44,7 @@ lst = list(zip(tayrad[::4], tayrad[1::4], tayrad[2::4], tayrad[3::4]))
 lst.append([Button.inline("=", data="calc=")])
 
 
-@kazu_cmd(pattern="calc")
+@kazu_cmd(pattern="الحاسبه")
 async def icalc(e):
     udB.del_key("calc")
     if e.client._bot:
