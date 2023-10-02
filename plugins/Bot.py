@@ -126,7 +126,7 @@ async def alive(event):
 
 
 @kazu_cmd(
-    pattern="alive( (.*)|$)",
+    pattern="فحص( (.*)|$)",
 )
 async def lol(ayra):
     match = ayra.pattern_match.group(1).strip()
@@ -248,7 +248,7 @@ async def shutdownbot(ayra):
 
 
 @kazu_cmd(
-    pattern="logs( (.*)|$)",
+    pattern="سجلات( (.*)|$)",
     chats=[],
 )
 async def _(event):
@@ -327,7 +327,7 @@ async def inline_alive(ayra):
     await ayra.answer(result)
 
 
-@kazu_cmd(pattern="update( (.*)|$)")
+@kazu_cmd(pattern="تحديث( (.*)|$)")
 async def _(e):
     xx = await e.eor(get_string("upd_1"))
     if e.pattern_match.group(1).strip() and (
