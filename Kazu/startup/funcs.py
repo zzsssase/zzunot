@@ -236,7 +236,7 @@ async def autopilot():
             r = await kazu_bot(
                 CreateChannelRequest(
                     title="Logs Kazu Ubot",
-                    about="Logs Kazu Ubot \n\n Cʀᴇᴀᴛᴇᴅ Bʏ @kazusupportgrp",
+                    about="Logs Kazu Ubot \n\n Cʀᴇᴀᴛᴇᴅ Bʏ @FH_KP",
                     megagroup=True,
                 ),
             )
@@ -302,7 +302,7 @@ async def autopilot():
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo = await download_file(
-            "https://graph.org//file/d854abd533a783c6642b1.jpg",
+            "https://graph.org/file/ce38e6f4937fc79a92a16.jpg",
             "resources/extras/logo.jpg",
         )
         ll = await kazu_bot.upload_file(photo)
@@ -334,7 +334,7 @@ async def customize():
             sir = f"@{kazu_bot.me.username}"
         file = random.choice(
             [
-                "https://graph.org//file/d854abd533a783c6642b1.jpg",
+                "https://graph.org/file/ce38e6f4937fc79a92a16.jpg",
                 "resources/extras/logo.jpg",
             ]
         )
@@ -362,7 +362,7 @@ async def customize():
         await kazu_bot.send_message("botfather", UL)
         await asyncio.sleep(1)
         await kazu_bot.send_message(
-            "botfather", f"✨ Hello ✨!! I'm Assistant Bot of {sir}"
+            "botfather", f"مرحبا انا البوت المساعد  الخاص بي{sir}"
         )
         await asyncio.sleep(2)
         await kazu_bot.send_message("botfather", "/setdescription")
@@ -371,7 +371,7 @@ async def customize():
         await asyncio.sleep(1)
         await kazu_bot.send_message(
             "botfather",
-            f"✨ Powerful Kazu Assistant Bot ✨\n✨ Master ~ {sir} ✨\n\n✨ Powered By ~ @KazuSupportGrp ✨",
+            f" البوت المساعد \n المالك ~ {sir} \n\nبواسطة ~ @FH_KP",
         )
         await asyncio.sleep(2)
         await msg.edit("Completed **Auto Customisation** at @BotFather.")
@@ -431,7 +431,7 @@ async def ready():
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
         MSG = """ **Thanks for Deploying Kazu Ubot!**
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
-        PHOTO = "https://graph.org//file/d854abd533a783c6642b1.jpg"
+        PHOTO = "https://graph.org/file/ce38e6f4937fc79a92a16.jpg"
         BTTS = Button.inline("• Click to Start •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Done")
     else:
