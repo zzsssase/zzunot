@@ -126,7 +126,7 @@ async def dmote(ayra):
 
 
 @kazu_cmd(
-    pattern="ban( (.*)|$)",
+    pattern="حظر( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",
@@ -156,7 +156,7 @@ async def bban(ayra):
 
 
 @kazu_cmd(
-    pattern="unban( (.*)|$)",
+    pattern="الغاء حظر( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",
