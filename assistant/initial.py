@@ -10,37 +10,24 @@ import re
 from . import *
 
 STRINGS = {
-    1: """ **Thanks for Deploying Kazu Ubot!**
+    1: """ **شڪرا لتنصيب بلاك ثون**
 
-• Here, are the Some Basic stuff from, where you can Know, about its Usage.""",
-    2: """🎉** About Kazu Ubot**
+◈ اليك بعض الاشباء الاساسيه لمعرفة ڪيفيه الاستخدام.""",
+    2: """◈** ʙʟᴀᴄᴋ ᴛʜᴏɴ**
+السـورس يحتوي الا مميزات عديده اڪتسفها بنفسك 😂...
 
- Kazu Ubot is Pluggable and powerful Telethon and Pyrogram Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
+~ 𝘤𝘳𝘦𝘢𝘵𝘦𝘥 𝘣𝘺 **@FH_ME**""",
+    3: """**𝘶𝘱𝘥𝘢𝘵𝘦𝘴**
 
-❣ Kang by **@Disinikazu**""",
-    3: """**💡• FAQs •**
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 -  [ʙʟᴀᴄᴋ ᴛʜᴏɴ¹](t.me/FH_KN)
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 -  [ʙʟᴀᴄᴋ ᴛʜᴏɴ²](t.me/FH_KP)
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 - [ʙʟᴀᴄᴋ ᴛʜᴏɴ³](t.me/FH_KP)
+.""",
+    4: f"""◈ **لمعرفة ڪافة الاوامـر اڪتب**
 
--> [Username Tracker](https://t.me/UltroidUpdates/24)
--> [Keeping Custom Addons Repo](https://t.me/UltroidUpdates/28)
--> [Disabling Deploy message](https://t.me/UltroidUpdates/27)
--> [Setting up TimeZone](https://t.me/UltroidUpdates/22)
--> [About Inline PmPermit](https://t.me/UltroidUpdates/21)
--> [About Dual Mode](https://t.me/UltroidUpdates/18)
--> [Custom Thumbnail](https://t.me/UltroidUpdates/13)
--> [About FullSudo](https://t.me/UltroidUpdates/11)
--> [Setting Up PmBot](https://t.me/UltroidUpdates/2)
--> [Also Check](https://t.me/UltroidUpdates/14)
-
-**• To Know About Updates**
-  - Join @kazusupportgrp.""",
-    4: f"""• `To Know All Available Commands`
-
-  - `{HNDLR}help`
-  - `{HNDLR}cmds`""",
-    5: """• **For Any Other Query or Suggestion**
-  - Move to **@kazusupportgrp**.
-
-• Thanks for Reaching till END.""",
+  - `{HNDLR}الاوامر`""",
+    5: """• **اي استفسار او اقتراح **
+  - انضم **[ʙʟᴀᴄᴋ ᴛʜᴏɴ](t.me/FH_KP)**.""",
 }
 
 
@@ -57,8 +44,8 @@ async def init_depl(e):
     await e.edit(
         STRINGS[CURRENT],
         buttons=[
-            Button.inline("<<", f"initbk_{str(CURRENT - 1)}"),
-            Button.inline(">>", f"initft_{str(CURRENT + 1)}"),
+            Button.inline("السابق", f"initbk_{str(CURRENT - 1)}"),
+            Button.inline("التالي", f"initft_{str(CURRENT + 1)}"),
         ],
         link_preview=False,
     )

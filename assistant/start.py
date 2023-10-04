@@ -29,7 +29,7 @@ if Owner_info_msg is None:
 
 **Message Forwards** - {udB.get_key("PMBOT")}
 
-**◈ ᴋᴀᴢᴜ ᴜʙᴏᴛ​ ◈ [v{kazu_version}](https://github.com/ionmusic/Kazu-Ubot), powered by @disinikazu**
+**◈ ʙʟᴀᴄᴋ ᴛʜᴏɴ​ ◈ [ʙʟᴀᴄᴋ ᴛʜᴏɴ¹](t.me/FH_KN)**
 """
 
 
@@ -46,19 +46,18 @@ _settings = [
         Button.inline("Fᴇᴀᴛᴜʀᴇs", data="cbs_otvars"),
         Button.inline("VC Sᴏɴɢ Bᴏᴛ", data="cbs_vcb"),
     ],
-    [Button.inline("« Bᴀᴄᴋ", data="mainmenu")],
+    [Button.inline("« رجوع", data="mainmenu")],
 ]
 
 _start = [
     [
-        Button.inline("Bahasa 🌐", data="lang"),
-        Button.inline("Pengaturan ⚙️", data="setter"),
+        Button.inline("الفارات", data="setter"),
     ],
     [
-        Button.inline("Sᴛᴀᴛs ✨", data="stat"),
-        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ 📻", data="bcast"),
+        Button.inline("احصائيات البوت", data="stat"),
+        Button.inline("الأذاعـه", data="bcast"),
     ],
-    [Button.inline("TɪᴍᴇZᴏɴᴇ 🌎", data="tz")],
+    [Button.inline("المنطقه", data="tz")],
 ]
 
 
@@ -68,7 +67,7 @@ async def own(event):
         mention=event.sender.mention, me=inline_mention(kazu_bot.me)
     )
     if custom_info:
-        msg += "\n\n• Powered by **@kazusupportgrp**"
+        msg += "\n\n• Powered by **@FH_KP**"
     await event.edit(
         msg,
         buttons=[Button.inline("Close", data="closeit")],

@@ -32,14 +32,13 @@ from . import _kazu_cache
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/ionmusic/Kazu-Ubot"),
-        Button.url("• Support •", url="t.me/kazusupportgrp"),
+        Button.url("• 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 •", url="t.me/FH_KP"),
     ],
 ]
 
 ofox = "https://graph.org/file/231f0049fcd722824f13b.jpg"
 gugirl = "https://graph.org/file/0df54ae4541abca96aa11.jpg"
-kazupic = "https://graph.org//file/d854abd533a783c6642b1.jpg"
+Blackpic = "https://graph.org/file/2ec091e811a3fa03bc955.jpg"
 
 apis = [
     "QUl6YVN5QXlEQnNZM1dSdEI1WVBDNmFCX3c4SkF5NlpkWE5jNkZV",
