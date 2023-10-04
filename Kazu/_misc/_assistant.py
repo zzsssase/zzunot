@@ -21,20 +21,20 @@ from . import append_or_update, owner_and_sudos
 OWNER = kazu_bot.full_name
 
 MSG = f"""
-**ᴋᴀᴢᴜ ᴜʙᴏᴛ​**
+**ʙʟᴀᴄᴋ ᴛʜᴏɴ​**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{OWNER}](tg://user?id={kazu_bot.uid})
-**Support**: @kazusupportgrp
+**ᴏᴡɴᴇʀ**: [{OWNER}](tg://user?id={kazu_bot.uid})
+**ᴜᴘᴅᴀᴛᴇs**: @FH_KN
 ➖➖➖➖➖➖➖➖➖➖
 """
 
 IN_BTTS = [
     [
         Button.url(
-            "Repository",
-            url="https://github.com/ionmusic/Kazu-Ubot",
+            "𝘶𝘱𝘥𝘢𝘵𝘦𝘴¹",
+            url="https://t.me/FH_KP",
         ),
-        Button.url("Support", url="https://t.me/kazusupportgrp"),
+        Button.url("𝘶𝘱𝘥𝘢𝘵𝘦𝘴²", url="https://t.me/FH_KN"),
     ]
 ]
 
@@ -91,12 +91,12 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="ᴋᴀᴢᴜ ᴜʙᴏᴛ​",
-                        url="https://t.me/kazusupportgrp​",
-                        description="© ᴋᴀᴢᴜ ᴜʙᴏᴛ",
+                        title="ʙʟᴀᴄᴋ ᴛʜᴏɴ​",
+                        url="https://t.me/FH_KP ​",
+                        description="© ʙʟᴀᴄᴋ ᴛʜᴏɴ",
                         text=MSG,
                         thumb=InputWebDocument(
-                            "https://graph.org//file/d854abd533a783c6642b1.jpg",
+                            "https://graph.org/file/2ec091e811a3fa03bc955.jpg",
                             0,
                             "image/jpeg",
                             [],
@@ -117,7 +117,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 err = format_exc()
 
                 def error_text():
-                    return f"**#ERROR #INLINE**\n\nQuery: `{asst.me.username} {pattern}`\n\n**Traceback:**\n`{format_exc()}`"
+                    return f"**حدث خطأ**\n\nQuery: `{asst.me.username} {pattern}`\n\n**Traceback:**\n`{format_exc()}`"
 
                 LOGS.exception(er)
                 try:
@@ -127,7 +127,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/kazusupportgrp"
+                                    "𝘶𝘱𝘥𝘢𝘵𝘦𝘴", "https://t.me/FH_KP"
                                 ),
                             )
                         ]
