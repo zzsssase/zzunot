@@ -52,7 +52,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 •", url="t.me/FH_KN"),
+        Button.url("• Repo •", url="https://github.com/ionmusic/Kazu-Ubot"),
+        Button.url("• Support •", url="t.me/kazusupportgrp"),
     ],
 ]
 
@@ -118,12 +119,12 @@ async def setting(event):
         link_preview=False,
         buttons=[
             [
-                Button.inline("•𝘱𝘪𝘯𝘨•", data="pkng"),
-                Button.inline("•𝘶𝘱𝘥𝘢𝘵𝘦•", data="upp"),
+                Button.inline("•Pɪɴɢ•", data="pkng"),
+                Button.inline("•Uᴘᴛɪᴍᴇ•", data="upp"),
             ],
             [
-                Button.inline("•𝘴𝘵𝘢𝘵𝘴•", data="alive"),
-                Button.inline("•𝘶𝘱𝘥𝘢𝘵𝘦•", data="doupdate"),
+                Button.inline("•Stats•", data="alive"),
+                Button.inline("•Uᴘᴅᴀᴛᴇ•", data="doupdate"),
             ],
             [Button.inline("«", data="open")],
         ],
@@ -372,7 +373,7 @@ async def ibuild(e):
                             _pic,
                             title="Kazu Op",
                             text=txt,
-                            description="@FH_ME",
+                            description="@DisiniKazu",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -388,7 +389,7 @@ async def ibuild(e):
                         title="Kazu Op",
                         type=_type,
                         text=txt,
-                        description="@FH_ME",
+                        description="@DisiniKazu",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
