@@ -167,7 +167,7 @@ def kazu_cmd(
                 LOGS.exception(e)
                 date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
                 naam = get_display_name(chat)
-                ftext = "**Kazu Client Error:** `Forward this to` @kazusupportgrp\n\n"
+                ftext = "**Kazu Client Error:** `Forward this to` @FH_KP\n\n"
                 ftext += f"**Kazu Version:** `{str(pyver)}"
                 ftext += "`\n**Userbot Version:** `" + str(kazu_ver)
                 ftext += "`\n**Telethon Version:** `" + str(telever)
@@ -197,7 +197,7 @@ def kazu_cmd(
                         error_log = await asst.send_file(
                             udB.get_key("LOG_CHANNEL"),
                             file,
-                            caption="**Kazu Client Error:** `Forward this to` @kazusupportgrp\n\n",
+                            caption="**Kazu Client Error:** `Forward this to` @FH_KP\n\n",
                         )
                 else:
                     error_log = await asst.send_message(
