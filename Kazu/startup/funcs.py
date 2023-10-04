@@ -430,12 +430,12 @@ async def ready():
     spam_sent = None
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
         MSG = """ **شڪرا لتنصيبك بلاك ثـون!**
-• Here, are the Some Basic stuff from, where you can Know, about its Usage."""
+• **اليك بعض الاشياء الاساسيه لمعرفة كيفة إستخدام البوت**."""
         PHOTO = "https://graph.org/file/2ec091e811a3fa03bc955.jpg"
         BTTS = Button.inline("• Click to Start •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Done")
     else:
-        MSG = f"**Black Thon has been deployed!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(black_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @FH_KN\n➖➖➖➖➖➖➖➖➖➖"
+        MSG = f"**Kazu Ubot has been deployed!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(black_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @FH_KN\n➖➖➖➖➖➖➖➖➖➖"
         BTTS, PHOTO = None, None
         if prev_spam := udB.get_key("LAST_UPDATE_LOG_SPAM"):
             try:
