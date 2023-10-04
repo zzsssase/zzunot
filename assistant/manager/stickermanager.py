@@ -25,7 +25,7 @@ from . import LOGS, asst, asst_cmd, udB
 
 
 @asst_cmd(
-    pattern="kang",
+    pattern="ملصق",
 )
 async def kang_cmd(ay):
     sender = await ay.get_sender()
@@ -97,7 +97,7 @@ async def kang_cmd(ay):
                     stickers=[SetItem(file, emoji=emoji)],
                     videos=video,
                     animated=animated,
-                    software="@stufsupport",
+                    software="@FH_KP",
                 )
             )
         except Exception as er:
