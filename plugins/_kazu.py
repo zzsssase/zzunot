@@ -14,52 +14,32 @@ from telethon.errors import (
 from . import LOG_CHANNEL, LOGS, Button, asst, kazu_cmd, eor, get_string
 
 REPOMSG = """
-◈ **ᴋᴀᴢᴜ ᴜʙᴏᴛ​** ◈\n
-◈ Repo - [Click Here](https://github.com/ionmusic/Kazu-Ubot)
-◈ Addons - [Click Here](https://github.com/ionmusic/addons)
-◈ Support - @kazusupportgrp
+◈ **ʙʟᴀᴄᴋ ᴛʜᴏɴ​** ◈\n
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 -  [ʙʟᴀᴄᴋ ᴛʜᴏɴ¹](t.me/FH_KN)
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 -  [ʙʟᴀᴄᴋ ᴛʜᴏɴ²](t.me/FH_KP)
+◈ 𝘶𝘱𝘥𝘢𝘵𝘦𝘴 - [ʙʟᴀᴄᴋ ᴛʜᴏɴ³](t.me/FH_KP)
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/ionmusic/Kazu-Ubot"),
-        Button.url("Addons", "https://github.com/ionmusic/Addons"),
+        Button.url("𝘶𝘱𝘥𝘢𝘵𝘦𝘴", "https://t.me/FH_KN"),
     ],
-    [Button.url("Support Group", "t.me/kazusupportgrp")],
+    [Button.url("ᴜᴘᴅᴀᴛᴇs", "t.me/FH_KP")],
 ]
 
-KAZUSTRING = """🎇 **Thanks for Deploying ᴋᴀᴢᴜ ᴜʙᴏᴛ!**
+KAZUSTRING = """» **شڪرا لتنصيب بلاك ثون!**
 
-• Here, are the Some Basic stuff from, where you can Know, about its Usage."""
-
-
-@kazu_cmd(
-    pattern="repo$",
-    manager=True,
-)
-async def repify(e):
-    try:
-        q = await e.client.inline_query(asst.me.username, "")
-        await q[0].click(e.chat_id)
-        return await e.delete()
-    except (
-        ChatSendInlineForbiddenError,
-        ChatSendMediaForbiddenError,
-        BotMethodInvalidError,
-    ):
-        pass
-    except Exception as er:
-        LOGS.info(f"Error while repo command : {str(er)}")
-    await e.eor(REPOMSG)
+◈ **اليك بعض الاشياء الاساسيه لمعرفة ڪيفبة الاستخدام**."""
 
 
-@kazu_cmd(pattern="kazu$")
+
+@kazu_cmd(pattern="بلاك ثون$")
 async def useAyra(rs):
     button = Button.inline("Start >>", "initft_2")
     msg = await asst.send_message(
         LOG_CHANNEL,
         KAZUSTRING,
-        file="https://telegra.ph/file/e2f568b76280fadc8ee54.jpg",
+        file="https://graph.org/file/d37e4a00d0779a80af603.jpg",
         buttons=button,
     )
     if not (rs.chat_id == LOG_CHANNEL and rs.client._bot):

@@ -5,22 +5,22 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-◈ Perintah Tersedia
+◈ **اوامـر الحساب**
 
-• `{i}setname <first name // last name>`
-    Ubah nama profil Anda.
+◈ `وضع الاسم`
+» **لتغييـر اسمك الشخصي قم بڪتابة الامـر + الاسـم الي تريد تعمله لحسابك**.
 
-• `{i}setbio <bio>`
-    Ubah bio profil Anda.
+◈ `وضع بايو`
+» **لتغييـر البايـو الخاص بحسابك قم بالرد علئ الجمله الي تريد تعملها في البايـو** .
 
-• `{i}setfp <reply to pic>`
-    Ubah foto profil Anda.
+◈ `وضع الصوره`
+» **لتغييــر صووة حسابك قم بالرد علئ الصوره التي تريد تعملها لحسابك**.
 
-• `{i}delfp <n>(optional)`
-    Hapus satu foto profil, jika tidak ada nilai yang diberikan, hapus n jumlah foto.
+◈ `حذف صورتي`
+» ** لحذف الصوره الخاصه بحسابك الشخصي**.
 
-• `{i}poto <username>`
-    Unggah foto Obrolan/Pengguna jika Tersedia.
+◈ `افتاره`
+» ** لعرض صورة الشخص او صووة المجموعه**.
 """
 import os
 
@@ -34,7 +34,7 @@ TMP_DOWNLOAD_DIRECTORY = "resources/downloads/"
 # bio changer
 
 
-@kazu_cmd(pattern="setbio( (.*)|$)", fullsudo=True)
+@kazu_cmd(pattern="وضع بايو( (.*)|$)", fullsudo=True)
 async def _(ayra):
     ok = await ayra.eor("...")
     set = ayra.pattern_match.group(1).strip()
@@ -48,7 +48,7 @@ async def _(ayra):
 # name changer
 
 
-@kazu_cmd(pattern="setname ?((.|//)*)", fullsudo=True)
+@kazu_cmd(pattern="وضع الاسم ?((.|//)*)", fullsudo=True)
 async def _(ayra):
     ok = await ayra.eor("...")
     names = ayra.pattern_match.group(1).strip()
@@ -71,7 +71,7 @@ async def _(ayra):
 # profile pic
 
 
-@kazu_cmd(pattern="setfp$", fullsudo=True)
+@kazu_cmd(pattern="وضع الصوره$", fullsudo=True)
 async def _(ayra):
     if not ayra.is_reply:
         return await ayra.eor("`Balas ke Media..`", time=5)
@@ -93,7 +93,7 @@ async def _(ayra):
 # delete profile pic(s)
 
 
-@kazu_cmd(pattern="delfp( (.*)|$)", fullsudo=True)
+@kazu_cmd(pattern="حذف صورتي( (.*)|$)", fullsudo=True)
 async def remove_profilepic(delpfp):
     ok = await eor(delpfp, "`...`")
     group = delpfp.text[8:]
@@ -108,7 +108,7 @@ async def remove_profilepic(delpfp):
     await eod(ok, f"`Berhasil dihapus {len(pfplist)} gambar profil(s).`")
 
 
-@kazu_cmd(pattern="poto( (.*)|$)")
+@kazu_cmd(pattern="افتاره( (.*)|$)")
 async def gpoto(e):
     ayra = e.pattern_match.group(1).strip()
     a = await e.eor(get_string("com_1"))

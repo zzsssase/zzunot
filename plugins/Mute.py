@@ -5,26 +5,26 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-◈ Perintah Tersedia
+◈ **اوامـر الڪتـم والتقييد**
 
-• `{i}mute <reply to msg/ user id>`
-    Bisukan pengguna dalam obrolan saat ini.
+◈ `تقييد`
+» ** لتقييد الشخص في المجموعه بالرد علئ رسالته او يـوزه**
 
-• `{i}unmute <reply to msg/ user id>`
-    Aktifkan pengguna dalam obrolan saat ini.
+◈ `الغاء التقييد`
+» **لرفع القيود عن الشخص في المجموعه بالرد علئ رسالته او يـوزره**
 
-• `{i}dmute <reply to msg/ user id>`
-    Bisukan pengguna dalam obrolan saat ini dengan menghapus pesan.
+◈ `كتم`
+» ** لڪتم الشخص في المجموعه بالرد علئ رسالته او يـوزره**.
 
-• `{i}undmute <reply to msg/ use id>`
-    Suarakan pengguna yang dibisukan dalam obrolan saat ini.
+◈ `الغاء كتم`
+» ** لرفع الڪتم عن الشخص في المجموعه بالرد علئ رسالته او يـوزره**.
 
-• `{i}tmute <time> <reply to msg/ use id>`
-    s- seconds
-    m- minutes
-    h- hours
-    d- days
-    Bisukan pengguna dalam obrolan saat ini dengan waktu.
+◈ `كتم مؤقت`
+    s- **ثـواني**
+    m- **دقائـق**
+    h- **ساعـات**
+    d- **يـوم**
+» ** لڪتم الشخص لوقت محدد بالرد علئ رسالته او يـوزره**.
 """
 from telethon import events
 from telethon.utils import get_display_name
@@ -44,7 +44,7 @@ async def watcher(event):
 
 
 @kazu_cmd(
-    pattern="dmute( (.*)|$)",
+    pattern="كتم( (.*)|$)",
 )
 async def startmute(event):
     xx = await event.eor("`Bentar...`")
@@ -75,7 +75,7 @@ async def startmute(event):
 
 
 @kazu_cmd(
-    pattern="undmute( (.*)|$)",
+    pattern="الغاء كتم( (.*)|$)",
 )
 async def endmute(event):
     xx = await event.eor("`Bentar...`")
@@ -97,7 +97,7 @@ async def endmute(event):
 
 
 @kazu_cmd(
-    pattern="tmute",
+    pattern="كتم مؤقت",
     groups_only=True,
     manager=True,
 )
@@ -142,7 +142,7 @@ async def _(e):
 
 
 @kazu_cmd(
-    pattern="unmute( (.*)|$)",
+    pattern="الغاء التقييد( (.*)|$)",
     admins_only=True,
     manager=True,
 )
@@ -176,7 +176,7 @@ async def _(e):
 
 
 @kazu_cmd(
-    pattern="mute( (.*)|$)", admins_only=True, manager=True, require="ban_users"
+    pattern="تقييد( (.*)|$)", admins_only=True, manager=True, require="ban_users"
 )
 async def _(e):
     xx = await e.eor("`Bentar...`")

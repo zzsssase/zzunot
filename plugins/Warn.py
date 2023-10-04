@@ -5,19 +5,17 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-◈ اوامر الإنذارات
+◈ **اوامر الإنذارات**
 
-•`{i}انذار < لإعطاء الشخص انذار قم بالرد على رسالته او يوزه.
+◈ `انذار`
+» **لإعطاء الشخص انذار داخل المجموعه بالرد علئ رسالته او يـوزره**.
 
-•`{i}الغاء الانذار< لألغاء انذار الشخص قم بالرد على رسالته او يوزه.
+◈ `الغاء الانذار`
+» ** لألغاء انذار الشخص بالرد علئ رسالته او يـوزره**.
 
-•`{i}الانذارات <لمعرفة عدد الانذارات لشخص.
+◈ **`الانذارات`
+» **لمعرفة عدد الانذارات الشخص**.
 
-•`{i}setwarn <warn count> | <ban/mute/kick>`
-   Tetapkan Angka dalam jumlah peringatan untuk peringatan
-   Setelah memberi tanda " | ", beri tindakan seperti larangan/bisu/tendang
-   Tendangan Default 3-nya
-   Example : `setwarn 5 | mute`
 
 """
 
