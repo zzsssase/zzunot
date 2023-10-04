@@ -7,12 +7,12 @@ authors:
   - riizz
 
 # commons
-com_1: ""
-com_2: ""
+com_1: "جاري المعالجة"
+com_2: "جاري المعالجة"
 com_3: "`Yang anda Masukan Tidak Valid`"
 com_4: "`Media Tidak Didukung..`"
-com_5: "`**جاري التحميـل**...`"
-com_6: "`**جاري التحميـل**...`"
+com_5: "`جاري التحميـل...`"
+com_6: "`جاري التحميـل...`"
 com_7: "`Maaf Telah Terjadi ERROR`"
 
 # chatactions
@@ -26,7 +26,7 @@ help_1: "`{}` bukan plugin yang valid!"
 help_2: "Bot tidak menanggapi inline kueri.\nLebih baik untuk menggunakan `{}restart`"
 help_3: "`Tolong aktifkan inline mode bot Anda dari` @Botfather."
 help_4: "اوامر المالك"
-help_5: ""
+help_5: "اوامر إضافية"
 help_6: "Vc Tools"
 help_7: "Inline Plugins"
 help_8: "المالك"
